@@ -797,4 +797,4 @@ WORKDIR /var/www
 
 CMD ["php-fpm"]
 
-EXPOSE 9001
+EXPOSE 9000

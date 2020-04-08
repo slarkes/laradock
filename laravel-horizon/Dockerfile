@@ -69,7 +69,7 @@ RUN if [ ${INSTALL_CASSANDRA} = true ]; then \
 
 RUN printf "\n" | pecl install -o -f redis \
     &&  rm -rf /tmp/pear \
-    &&  docker-php-ext-enable redis \
+    &&  docker-php-ext-enable redis
 
 ###########################################################################
 # PHP Memcached:

@@ -26,6 +26,10 @@ ENV DEBIAN_FRONTEND noninteractive
 # Start as root
 USER root
 
+#切换apt源
+RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+RUN  apt-get clean
+
 ###########################################################################
 # Laradock non-root user:
 ###########################################################################

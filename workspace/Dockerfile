@@ -29,7 +29,7 @@ USER root
 #切换apt源
 RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 RUN  sed -i s@/security.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
-RUN  sed -i s@/ppa.launchpad.net/@/launchpad.proxy.ustclug.org/@g `grep -rl "ppa.launchpad.net" /etc/apt/sources.list.d`
+RUN  sed -i s@/ppa.launchpad.net/@/ppa.jsaix.cn/@g `grep -rl "ppa.launchpad.net" /etc/apt/sources.list.d`
 RUN  apt-get clean
 
 ###########################################################################

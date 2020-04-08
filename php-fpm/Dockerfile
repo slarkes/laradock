@@ -25,7 +25,6 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 RUN  sed -i s@/security.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
-RUN  sed -i s@/ppa.launchpad.net/@/ppa.jsaix.cn/@g `grep -rl "ppa.launchpad.net" /etc/apt/sources.list.d`
 RUN  apt-get clean
 
 # always run apt update when start and after add new source list, then clean up at end.

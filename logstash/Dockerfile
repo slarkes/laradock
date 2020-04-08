@@ -1,4 +1,5 @@
-FROM docker.elastic.co/logstash/logstash:6.5.4
+ARG ELK_VERSION=6.5.4
+FROM docker.elastic.co/logstash/logstash:${ELK_VERSION}
 
 USER root
 RUN rm -f /usr/share/logstash/pipeline/logstash.conf

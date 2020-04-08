@@ -28,6 +28,8 @@ USER root
 
 #切换apt源
 RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+RUN  sed -i s@/security.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+RUN  sed -i s@/ppa.launchpad.net/@/launchpad.proxy.ustclug.org/@g /etc/apt/sources.list
 RUN  apt-get clean
 
 ###########################################################################

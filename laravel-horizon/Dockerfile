@@ -67,7 +67,9 @@ RUN if [ ${INSTALL_CASSANDRA} = true ]; then \
   && docker-php-ext-enable cassandra \
 ;fi
 
-RUN apt-get update -yqq && apt-get install -yqq php-redis
+RUN printf "\n" | pecl install -o -f redis \
+    &&  rm -rf /tmp/pear \
+    &&  docker-php-ext-enable redis \
 
 ###########################################################################
 # PHP Memcached:
